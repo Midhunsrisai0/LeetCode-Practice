@@ -9,10 +9,9 @@ class Solution {
           }
           hm.put(n,c);
       }  
-      int b []=new int[nums.length];
       for(int i=0;i<nums.length;i++){
-          b[i] = hm.get(nums[i]);
+          nums[i] = hm.get(nums[i]);
       } 
-      return b;
+      return nums;
     }
 }
