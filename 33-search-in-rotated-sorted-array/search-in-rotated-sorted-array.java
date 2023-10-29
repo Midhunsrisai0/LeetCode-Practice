@@ -5,11 +5,11 @@ class Solution {
             int mid = (l+h)/2;
             if(nums[mid]==target) return mid;
             else if(nums[l]<=nums[mid]){
-                if(target<nums[mid] && target>=nums[l]) h = mid-1;
+                if(target<=nums[mid] && target>=nums[l]) h = mid-1;
                 else l= mid+1;
             } 
             else{
-                if(target>nums[mid] && target<=nums[h]) l=mid+1;
+                if(target>=nums[mid] && target<=nums[h]) l=mid+1;
                 else h = mid-1;
             }
         }
