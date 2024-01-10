@@ -1,7 +1,7 @@
 import java.util.TreeSet;
 class Solution {
     public String longestCommonPrefix(String[] strs) {
-        String fs="";
+        StringBuilder fs= new StringBuilder();
         int minLength=strs[0].length();
         for(String i: strs){
             int l;
@@ -12,9 +12,9 @@ class Solution {
             System.out.println("b --"+ i);
             TreeSet<Character> ts = new TreeSet<>();
             for(String s: strs) ts.add(s.charAt(i));
-            if(ts.size()==1) fs+=strs[0].charAt(i);
-            else return fs;
+            if(ts.size()==1) fs.append(strs[0].charAt(i));
+            else return fs.toString();
         }
-        return fs;
+        return fs.toString();
     }
 }
